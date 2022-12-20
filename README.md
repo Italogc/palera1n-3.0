@@ -25,7 +25,7 @@ Please, please, please, provide necessary info:
 
 # palera1n
 
-iOS 15.0-15.7.1 **work in progress, tethered** checkm8 "jailbreak" 
+iOS 15.0-15.7.2 **work in progress, tethered** checkm8 "jailbreak" 
 
 # What does this do?
 
@@ -45,27 +45,37 @@ Stop making issues about Linux not being able to connect, we are aware. This inc
     - You must install the Tips app from the App Store before running the script
 - 2. Linux or macOS computer
     - Python 3 is required
-- 3. iOS 15.0-15.7.1
+- 3. iOS 15.0-15.7.2
 - 4. A brain
     - Remember, this is mainly for developers.
 
 # How to use
-- 1. Clone this repo with `git clone --recursive https://github.com/pwnd2e/palera1n-3.0 && cd palera1n-3.0`
-    - \[A10+\] Before running, you **must** disable your passcode
-    - Put your device in DFU Mode before running.
-- 2. - For rootless Run `./palera1n.sh --tweaks <ios version youre on atm>`   
-   _for fakefs run `./palera1n.sh --tweaks <ios version youre on atm> --semi-tethered` 
-   - With semi-tether after first install and re-jailbreaking just hit activate tweaks then respring
-   - if your having trouble with dfu booting in the middle of the procces,
-     start over and use   `./palera1n.sh --dfuhelper` 
-when it starts ramdisk exit out of terminal and cd back into palera1n and start from 2 again.
-    - You will be prompt do you unerstand type  `Yes, pwn my idevice`  
-    - then it will ask you again type `Yes, do as I say`
-- 3. Let it ra1n
+*OBS: no lugar do "15.x.x" nos comandos abaixo bote a mesma versão do ios instalada no seu aparelho
 
+- 1. Clonar este repositório no xfce terminal com o comando `sudo git clone --recursive https://github.com/Italogc/palera1n-3.0 && cd palera1n-3.0`
+    - Antes de fazer o jailbreak desative todos os códigos de bloqueio presentes no seu aparelho
+    - Botar seu aparelho em modo DFU manualmente antes de fazer o procedimento de jailbreak.
+    
+- 2. - For rootless Run `sudo ./palera1n.sh --tweaks 15.x.x` 
+   - Após fazer o jailbreak semi-tethered, e for refazer o jailbreak, lembre-se de dar "do all" nos ajustes do palera1n
+   - Se o processo travar pela metade e seu aparelho crashar em modo dfu, execute o comando a seguir para destravar o seu aparelho: 
+   `sudo ./palera1n.sh --dfuhelper` 
+   
+- 3. Durante a primeira vez que for fazer jailbreak no seu aparelho, você vai ter que copiar e colar as seguintes frases no terminal e dar enter para prosseguir com o procedimento de jailbreak:
+    - Quando o terminal solicitar digite:  `Yes, pwn my idevice`  
+    - Em seguida, quando o terminal solicitar digite: `Yes, do as I say`
 
+- 4. CASO ACONTEÇA DO JAILBREAK E O APARELHO CRASHAREM EM BOOTLOOP ETERNO COM A FRASE "waiting for connection no connection for 2222->22, fd = 5" NO TERMINAL, ABRA A SEGUNDA JANELA ABERTA DO TERMINAL E DIGITE CADA UM DOS COMANDOS ABAIXO PARA DESCRASHAR O APARELHO DO BOOTLOOP ETERNO. MAS JAMAIS FECHE A OUTRA JANELA DO TERMINAL, POIS O PROCESSO DE JAILBREAK VAI CONTINUAR EM DIANTE NAS DUAS JANELAS JUNTAS AO MESMO TEMPO:
 
+sudo systemctl stop usbmuxd
 
+sudo usbmuxd -f -p
+
+- 5. Caso o processo de jailbreak algum dia crashe seu aparelho, bote seu aparelho em modo DFU você poderá deletar o jailbreak pelos comandos abaixo no terminal:
+
+cd palera1n-3.0
+
+sudo ./palera1n.sh --restorerootfs 15.x.x
 
 
 
@@ -92,5 +102,3 @@ All repos work because it uses normal Procursus and not rootless.
 - [tihmstar](https://github.com/tihmstar) for pzb/original iBoot64Patcher/img4tool
 - [xerub](https://github.com/xerub) for img4lib and restored_external in the ramdisk
 - [Cryptic](https://github.com/Cryptiiiic) for iBoot64Patcher fork
-
-
