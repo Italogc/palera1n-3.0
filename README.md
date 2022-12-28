@@ -27,7 +27,7 @@ Please, please, please, provide necessary info:
 
 # palera1n
 
-iOS 15.0-15.7.2 **work in progress, tethered** checkm8 "jailbreak" 
+iOS 15.0-15.7.2 **work in progress, semitethered** checkm8 "jailbreak" 
 
 # What does this do?
 
