@@ -58,7 +58,8 @@ Stop making issues about Linux not being able to connect, we are aware. This inc
     - Antes de fazer o jailbreak desative todos os códigos de bloqueio presentes no seu aparelho
     - Botar seu aparelho em modo DFU manualmente antes de fazer o procedimento de jailbreak.
     
-- 2. - For rootless Run `sudo ./palera1n.sh --tweaks 15.x.x` 
+- 2. - Para fazer o jailbreak, se você já deu o comando 'cd palera1n-3.0' bote o seguinte comando no terminal:
+      `sudo ./palera1n.sh --tweaks 15.x.x` 
    - Após fazer o jailbreak semi-tethered, e for refazer o jailbreak, lembre-se de dar "do all" nos ajustes do palera1n
    - Se o processo travar pela metade e seu aparelho crashar em modo dfu, execute o comando a seguir para destravar o seu aparelho: 
    `sudo ./palera1n.sh --dfuhelper` 
