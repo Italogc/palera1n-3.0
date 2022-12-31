@@ -7,7 +7,7 @@
 
 
 
-Dando fix no trabalho lamentável dos desenvolvedores no ios15.X, resolvendo problemas de bootloop e gaster ausente.
+Dando fix no trabalho lamentável dos desenvolvedores no ios15.X e 16.X, resolvendo problemas de bootloop e gaster ausente.
 # This is a work in progress. by [pwnd2e@Twitter](https://twitter.com/pwnd2e) for this modified version of [palera1n](https://github.com/palera1n/palera1n)
 Read this throughly, feel free to ask questions, know the risks. 
 
@@ -54,45 +54,55 @@ Stop making issues about Linux not being able to connect, we are aware. This inc
 # How to use
 *OBS: no lugar do "15.x.x" nos comandos abaixo bote a mesma versão do ios instalada no seu aparelho
 
-- 1. Clonar este repositório no xfce terminal com o comando `sudo git clone --recursive https://github.com/Italogc/palera1n-3.0 && cd palera1n-3.0`
+- 1. Clonar este repositório no xfce terminal com o comando:
+
+`sudo git clone --recursive https://github.com/Italogc/palera1n-3.0 && cd palera1n-3.0`
+
     - Antes de fazer o jailbreak desative todos os códigos de bloqueio presentes no seu aparelho
     - Botar seu aparelho em modo DFU manualmente antes de fazer o procedimento de jailbreak.
+    
     
 - 2. - Para fazer o jailbreak, se você já deu o comando 'cd palera1n-3.0' bote o seguinte comando no terminal:
       `sudo ./palera1n.sh --tweaks 15.x.x` 
    - Após fazer o jailbreak semi-tethered, e for refazer o jailbreak, lembre-se de dar "do all" nos ajustes do palera1n
    - Se o processo travar pela metade e seu aparelho crashar em modo dfu, execute o comando a seguir para destravar o seu aparelho: 
+   
    `sudo ./palera1n.sh --dfuhelper` 
    
+   
 - 3. Durante a primeira vez que for fazer jailbreak no seu aparelho, você vai ter que copiar e colar as seguintes frases no terminal e dar enter para prosseguir com o procedimento de jailbreak:
-    - Quando o terminal solicitar digite:  `Yes, pwn my idevice`  
-    - Em seguida, quando o terminal solicitar digite: `Yes, do as I say`
+    - Quando o terminal solicitar digite:  `sim`  
+    - Em seguida, quando o terminal solicitar digite: `sim`
+
 
 - 4. CASO ACONTEÇA DO JAILBREAK E O APARELHO CRASHAREM EM BOOTLOOP ETERNO COM A FRASE "waiting for connection no connection for 2222->22, fd = 5" NO TERMINAL, ABRA A SEGUNDA JANELA ABERTA DO TERMINAL E DIGITE CADA UM DOS COMANDOS ABAIXO PARA DESCRASHAR O APARELHO DO BOOTLOOP ETERNO. MAS JAMAIS FECHE A OUTRA JANELA DO TERMINAL, POIS O PROCESSO DE JAILBREAK VAI CONTINUAR EM DIANTE NAS DUAS JANELAS JUNTAS AO MESMO TEMPO:
 
-sudo systemctl stop usbmuxd
+`sudo systemctl stop usbmuxd`
 
-sudo usbmuxd -f -p
+`sudo usbmuxd -f -p`
+
 
 - 5. Caso o processo de jailbreak algum dia crashe seu aparelho, bote seu aparelho em modo DFU você poderá deletar o jailbreak pelos comandos abaixo no terminal:
 
-cd palera1n-3.0
+`cd palera1n-3.0`
 
-sudo ./palera1n.sh --restorerootfs 15.x.x
+`sudo ./palera1n.sh --restorerootfs 15.x.x`
+
 
 - 6. É altemente recomendável atualizar seus programas de jailbreak do Palera1n ao menos 2 vezes por semana para atualizações de correções de bugs, para isso basta executar cada um dos 4 comandos abaixo em uma nova janela de terminal no seu linux:
 
-sudo rm -r palera1n
+`sudo rm -r palera1n`
 
-sudo rm -r palera1n-3.0
+`sudo rm -r palera1n-3.0`
 
-sudo git clone --recursive https://github.com/palera1n/palera1n
+`sudo git clone --recursive https://github.com/palera1n/palera1n`
 
-sudo git clone --recursive https://github.com/Italogc/palera1n-3.0
+`sudo git clone --recursive https://github.com/Italogc/palera1n-3.0`
+
 
 - 7. Para evitar problemas de USB no meio do processo de jailbreak, recomendo que você instale também no seu linux a pasta de drivers do usbmuxd2 antes de iniciar o processo de jailbreak. Para isso basta executar o comando abaixo no terminal:
 
-sudo git clone --recursive https://github.com/Italogc/usbmuxd2
+`sudo git clone --recursive https://github.com/Italogc/usbmuxd2`
 
 
 # Repos
