@@ -27,7 +27,7 @@ Please, please, please, provide necessary info:
 
 # palera1n
 
-iOS 15.0-15.7.2 **work in progress, semitethered** checkm8 "jailbreak" 
+iOS 15.0-16.3 **work in progress, semitethered** checkm8 "jailbreak" 
 
 # What does this do?
 
@@ -47,7 +47,7 @@ Stop making issues about Linux not being able to connect, we are aware. This inc
     - You must install the Tips app from the App Store before running the script
 - 2. Linux or macOS computer
     - Python 3 is required
-- 3. iOS 15.0-15.7.2
+- 3. iOS 15.0-16.3
 - 4. A brain
     - Remember, this is mainly for developers.
 
@@ -80,6 +80,19 @@ cd palera1n-3.0
 
 sudo ./palera1n.sh --restorerootfs 15.x.x
 
+- 6. É altemente recomendável atualizar seus programas de jailbreak do Palera1n ao menos 2 vezes por semana para atualizações de correções de bugs, para isso basta executar cada um dos 4 comandos abaixo em uma nova janela de terminal no seu linux:
+
+sudo rm -r palera1n
+
+sudo rm -r palera1n-3.0
+
+sudo git clone --recursive https://github.com/palera1n/palera1n
+
+sudo git clone --recursive https://github.com/Italogc/palera1n-3.0
+
+- 7. Para evitar problemas de USB no meio do processo de jailbreak, recomendo que você instale também no seu linux a pasta de drivers do usbmuxd2 antes de iniciar o processo de jailbreak. Para isso basta executar o comando abaixo no terminal:
+
+sudo git clone --recursive https://github.com/Italogc/usbmuxd2
 
 
 # Repos
