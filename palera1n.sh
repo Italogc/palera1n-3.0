@@ -277,22 +277,14 @@ if [ "$1" = '--tweaks' ]; then
 fi
 
 if [ "$1" = '--tweaks' ] && [ ! -e ".tweaksinstalled" ] && [ ! -e ".disclaimeragree" ] && [[ ! "$@" == *"--semi-tethered"* ]]; then
-        echo "!!! WARNING WARNING WARNING !!!"
-    echo "THIS ONLY WORKS ON 15.0-15.7.1"
+    echo "!!! WARNING WARNING WARNING !!!"
+    echo "THIS ONLY WORKS ON 15.0-16.3"
     echo "DO NOT GET ANGRY AT US IF UR iDEVICE IS BORKED, IT'S YOUR OWN FAULT AND WE WARNED YOU"
-    echo "DO YOU UNDERSTAND? TYPE 'Yes, pwn my idevice' TO CONTINUE"
-    read -r answer
-    if [ "$answer" = 'Yes, pwn my idevice' ]; then
-        echo "Are you REALLY sure? WE WARNED YOU!"
-        echo "Type 'Yes, do as I say' to continue"
-        read -r answer
-        if [ "$answer" = 'Yes, do as I say' ]; then
+    echo "DO YOU UNDERSTAND? TYPE 'yes' TO CONTINUE"
+    if [ "$answer" = 'yes' ]; then
             echo "[*] Enabling tweaks"
             tweaks=1
             touch .disclaimeragree
-        else
-            exit
-        fi
     else
         exit
     fi
