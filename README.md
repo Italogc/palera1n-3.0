@@ -99,7 +99,7 @@ Stop making issues about Linux not being able to connect, we are aware. This inc
 
 `sudo rm -r palera1n-3.0`
 
-`sudo git clone --recursive https://github.com/palera1n/palera1n/tree/legacy`
+`sudo git clone --recursive github.com/palera1n/palera1n -b legacy`
 
 `sudo git clone --recursive https://github.com/Italogc/palera1n-3.0`
 
